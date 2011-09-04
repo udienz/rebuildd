@@ -1,0 +1,5 @@
+[buillder]
+method = sftp
+fqdn = ironhide.udienz.web.id
+incoming = /srv/buildd/incoming
+login = robot

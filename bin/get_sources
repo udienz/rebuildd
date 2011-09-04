@@ -1,0 +1,8 @@
+#!/bin/bash
+ 
+d=$1
+p=$2
+v=$3
+ 
+sudo apt-get -c=/srv/buildd/apt/apt.conf update >/dev/null
+apt-get -c=/srv/buildd/apt/apt.conf -q --download-only -t ${d} source ${p}=${v}

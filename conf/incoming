@@ -1,0 +1,20 @@
+Name: lucid
+IncomingDir: /srv/buildd/incoming
+TempDir: /tmp
+Cleanup: on_deny on_error
+Allow: lucid
+Default: lucid
+
+Name: natty
+IncomingDir: /srv/buildd/incoming
+TempDir: /tmp
+Cleanup: on_deny on_error
+Allow: natty unstable
+Default: natty
+
+Name: oneiric
+IncomingDir: /srv/buildd/incoming
+TempDir: /tmp
+Cleanup: on_deny on_error
+Allow: oneiric
+Default: oneiric

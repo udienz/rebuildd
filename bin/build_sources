@@ -1,0 +1,23 @@
+#!/bin/bash
+ 
+action=$1
+release=$2
+package=$3
+version=$4
+changes_file=$5
+ 
+# Only care about packages being added
+if [ "$action" != "accepted" ]
+then
+	exit 0
+fi
+ 
+# Only care about source packages
+echo $changes_file | grep -q _source.changes
+if [ $? = 1 ]
+then
+	exit 0
+fi
+ 
+# Kick off the job
+echo "$package $version 1 $release"  | sudo rebuildd-job add

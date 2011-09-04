@@ -1,0 +1,3 @@
+* * * * * root /usr/bin/reprepro -b /srv/buildd processincoming incoming
+#* * * * * root /usr/bin/reprepro -b /srv/buildd processincoming lucid
+#* * * * * root /usr/bin/reprepro -b /srv/buildd processincoming natty
