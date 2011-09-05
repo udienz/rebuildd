@@ -18,6 +18,7 @@ Origin: Ubuntu
 Label: Ubuntu
 Codename: oneiric
 Suite: oneiric
+SignWith: 90B36C5B
 Components: main restricted universe multiverse
 UDebComponents: main
 UDebIndices: Packages . .gz .bz2
@@ -38,6 +39,7 @@ UDebComponents: main
 UDebIndices: Packages . .gz .bz2
 Architectures: amd64 i386 source
 Version: 10.04
+SignWith: 90B36C5B
 Description: Ubuntu 
 DebIndices: Packages Release . .gz .bz2
 Tracking: all includechanges keepsources
