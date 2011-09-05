@@ -2,7 +2,7 @@ Name: lucid
 IncomingDir: /srv/buildd/incoming
 TempDir: /tmp
 Cleanup: on_deny on_error
-Allow: lucid
+Allow: lucid unstable
 Default: lucid
 
 Name: natty
@@ -12,9 +12,16 @@ Cleanup: on_deny on_error
 Allow: natty unstable
 Default: natty
 
+Name: unstable
+IncomingDir: /srv/buildd/incoming
+TempDir: /tmp
+Cleanup: on_deny on_error
+Allow: oneiric unstable
+Default: oneiric
+
 Name: oneiric
 IncomingDir: /srv/buildd/incoming
 TempDir: /tmp
 Cleanup: on_deny on_error
-Allow: oneiric
+Allow: oneiric unstable
 Default: oneiric

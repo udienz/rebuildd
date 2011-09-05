@@ -16,6 +16,22 @@ Log: logfile
 
 Origin: Ubuntu
 Label: Ubuntu
+Codename: unstable
+Suite: unstable
+Components: main restricted universe multiverse
+UDebComponents: main
+UDebIndices: Packages . .gz .bz2
+SignWith: 90B36C5B
+Architectures: amd64 i386 source
+Version: 10.04
+Description: Ubuntu 
+DebIndices: Packages Release . .gz .bz2
+Tracking: all includechanges keepsources
+Log: logfile
+ --changes /srv/buildd/bin/build_sources
+
+Origin: Ubuntu
+Label: Ubuntu
 Codename: oneiric
 Suite: oneiric
 SignWith: 90B36C5B

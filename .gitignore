@@ -1,1 +1,6 @@
 db/
+apt/dir/apt/lists/
+incoming/
+apt/dir/cache/
+logs/
+apt/dir/apt/lists/lock

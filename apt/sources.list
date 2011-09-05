@@ -1,1 +1,10 @@
-deb http://localhost/ubuntu natty main
+deb http://localhost/ubuntu natty main restricted universe multiverse
+deb-src http://localhost/ubuntu natty main restricted universe multiverse
+deb http://localhost/ubuntu maverick main restricted universe multiverse
+deb-src http://localhost/ubuntu maverick main restricted universe multiverse
+deb-src http://localhost/ubuntu lucid main restricted universe multiverse
+deb http://localhost/ubuntu lucid main restricted universe multiverse
+deb-src http://localhost/paket oneiric main restricted universe multiverse
+deb-src http://localhost/paket natty main restricted universe multiverse
+deb-src http://localhost/paket lucid main restricted universe multiverse
+

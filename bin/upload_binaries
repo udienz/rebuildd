@@ -5,4 +5,5 @@ p=$2
 v=$3
 a=$4
  
-su -l -c "reprepro -V -b /srv/buildd include ${d} /var/cache/pbuilder/result/${p}_${v}_${a}.changes" udienz
+#su -l -c "reprepro -V -b /srv/buildd include ${d} /var/cache/pbuilder/result/${p}_${v}_${a}.changes" udienz
+su -l -c "reprepro -V -b /srv/buildd includedeb ${d} /var/cache/pbuilder/result/${p}_${v}*.deb" udienz
