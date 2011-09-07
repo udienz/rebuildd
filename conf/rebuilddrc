@@ -1,0 +1,41 @@
+[mail]
+mailto = udienz@ubuntu.com
+from = rebuildd@ironhide.udienz.web.id
+subject_prefix = [rebuildd]
+
+[http]
+logfile = /var/log/rebuildd/httpd.log
+log_lines_nb = 30
+ip = 0.0.0.0
+cache = 1
+templates_dir = /usr/share/rebuildd/templates
+port = 9998
+
+[build]
+max_jobs = 5
+max_threads = 2
+check_every = 300
+more_archs = any
+kill_timeout = 90
+source_cmd = /srv/buildd/bin/get_sources ${d} ${p} ${v}
+work_dir = /var/cache/rebuildd/build
+post_build_cmd = /srv/buildd/bin/upload_binaries ${d} ${p} ${v} ${a} 
+dists = lucid natty oneiric
+build_cmd = pbuilder build --basetgz /var/cache/pbuilder/${d}-${a}.tgz ${p}_${v}.dsc
+database_uri = sqlite:///var/lib/rebuildd/rebuildd.db
+build_more_recent = 1
+
+[telnet]
+ip = 127.0.0.1
+prompt = rebuildd@localhost->
+motd = Connected on rebuildd on localhost
+port = 9999
+
+[log]
+time_format = %d-%m-%Y %H:%M:%S
+logs_dir = /var/log/rebuildd/build_logs
+mail_failed = 1
+mail_successful = 1
+file = /var/log/rebuildd/rebuildd.log
+
+
