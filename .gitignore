@@ -4,3 +4,5 @@ incoming/
 apt/dir/cache/
 logs/
 apt/dir/apt/lists/lock
+tools/
+repos/

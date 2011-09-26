@@ -1,3 +1,3 @@
 basedir /srv/buildd
 confdir /srv/buildd/conf
-outdir /srv/www/paket
+outdir /srv/buildd/repos
