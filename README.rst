@@ -7,28 +7,47 @@ rebuildd is multi-threaded, so you can run multiple build jobs in parallel. It i
 
 rebuildd is designed to be run on multiple hosts even with different architecture set, and to parallelize the rebuild tasks. 
 
-Directory
+Instalasi
 =========
-My $BASE_DIR is /srv/buildd
 
-* conf
-of course, contain configurations.
- * conf/distributions, conf/options, conf/incoming.
-   Used for `reprepro<http://qa.qa.debian.org/reprepro>`_ config
- * rebuilddrc
-   Same as /etc/rebuildd/rebuilddrc
- * cron.daily
-   An example cron *OPTIONAL*
- * dotprofile
-   put into your home dir and replace dot with . it was used for gpg-agent, this files can save your gpg/ssh password into tty.
- * dput.cf
-   example dput
+Yang dibutuhkan adalah
+
+* `rebuildd <http://qa.debian.org/rebuildd>`_
+* `reprepro <http://qa.debian.org/reprepro>`_
+* `pbuilder <http://qa.debian.org/pnuilder>`_
+
+Untuk memasang kedua paket tersubut ketikkan::
+
+ sudo apt-get install rebuildd reprepro
+
+Direktori
+=========
+$BASE_DIR saya adalah /srv/buildd
+
+* conf: Berisikan tentang pengaturan rebuildd
+
+  - conf/distributions, conf/options, conf/incoming.
+    Digunakan untuk mengatur `reprepro <http://qa.qa.debian.org/reprepro>`_
+  - rebuilddrc
+    Sama dengan /etc/rebuildd/rebuilddrc, yaitu pengaturan rebuildd
+  - cron.daily
+    Contoh penjadwalan *OPTIONAL*. Namun dapat diganti jika anda menyertakan **post_upload_command** di dput
+  - dotprofile
+    Letakkan di $HOME dan ganti dot dengan . Berkas ini digunakan untuk gpg-agent agar supaya system dapat menyimpan password anda di TTY.
+  - dput.cf
+    Contoh dput yang berada di sisi client.
 
 * bin
-  contain binary file for post/pre build, see conf/rebuilddrc.
+  Berisikan berkas yang dieksekusi ketika post/pre build, lihat conf/rebuilddrc.
 
 * incoming
   incoming upload, see conf/dput for example
 
 * apt
   used for caching apt environment, we don't distrub apt'system so we create own
+
+Lihat juga
+========
+
+* `Local Debian Autobuilder <http://codedot.livejournal.com/70998.html>`_
+* `A bit of rebuildd history <http://julien.danjou.info/rebuildd.html>`_
